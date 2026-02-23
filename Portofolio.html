@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Krisna Eka Maulana | Data Analyst</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial, sans-serif;
+}
+
+body{
+background:#0f172a;
+color:white;
+}
+
+/* NAVBAR */
+
+nav{
+display:flex;
+justify-content:space-between;
+padding:20px 10%;
+background:#020617;
+position:sticky;
+top:0;
+}
+
+.logo{
+font-weight:bold;
+font-size:20px;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+margin-left:20px;
+}
+
+/* HERO */
+
+.hero{
+padding:120px 10%;
+text-align:center;
+}
+
+.hero h1{
+font-size:48px;
+margin-bottom:10px;
+}
+
+.hero p{
+color:#94a3b8;
+}
+
+.btn{
+display:inline-block;
+margin-top:20px;
+padding:12px 25px;
+background:#3b82f6;
+color:white;
+text-decoration:none;
+border-radius:8px;
+}
+
+/* SECTION */
+
+section{
+padding:80px 10%;
+}
+
+.section-title{
+font-size:32px;
+margin-bottom:40px;
+text-align:center;
+}
+
+/* ABOUT */
+
+.about{
+max-width:700px;
+margin:auto;
+text-align:center;
+color:#cbd5f5;
+}
+
+/* SKILLS */
+
+.skills{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+gap:20px;
+}
+
+.skill{
+background:#1e293b;
+padding:20px;
+border-radius:10px;
+text-align:center;
+}
+
+/* PROJECTS */
+
+.projects{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:25px;
+}
+
+.project{
+background:#1e293b;
+padding:25px;
+border-radius:12px;
+transition:.3s;
+}
+
+.project:hover{
+transform:translateY(-5px);
+}
+
+.project h3{
+margin-bottom:10px;
+}
+
+.project p{
+color:#94a3b8;
+}
+
+.project a{
+display:inline-block;
+margin-top:15px;
+color:#3b82f6;
+}
+
+/* CONTACT */
+
+.contact{
+text-align:center;
+}
+
+.contact a{
+display:block;
+margin:10px;
+color:#3b82f6;
+}
+
+/* FOOTER */
+
+footer{
+text-align:center;
+padding:30px;
+background:#020617;
+margin-top:50px;
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav>
+<div class="logo">Krisna Eka Maulana</div>
+<div>
+<a href="#about">About</a>
+<a href="#skills">Skills</a>
+<a href="#projects">Projects</a>
+<a href="#contact">Contact</a>
+</div>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+<h1>Data Analyst & Data Science Enthusiast</h1>
+<p>Mengubah data menjadi insight yang berdampak dan mudah dipahami.</p>
+<a class="btn" href="#projects">View My Work</a>
+</div>
+
+<!-- ABOUT -->
+<section id="about">
+<h2 class="section-title">About Me</h2>
+<p class="about">
+Lulusan Informatika Universitas AMIKOM Yogyakarta dengan fokus pada data analytics, data cleaning,
+dan visualisasi data. Berpengalaman dalam exploratory data analysis, preprocessing data,
+machine learning dasar, dan pembuatan dashboard untuk mendukung pengambilan keputusan berbasis data.
+</p>
+</section>
+
+<!-- SKILLS -->
+<section id="skills">
+<h2 class="section-title">Skills</h2>
+
+<div class="skills">
+<div class="skill">Python (Pandas)</div>
+<div class="skill">SQL</div>
+<div class="skill">Excel</div>
+<div class="skill">Power BI</div>
+<div class="skill">Tableau</div>
+<div class="skill">Data Cleaning</div>
+<div class="skill">EDA</div>
+<div class="skill">Machine Learning</div>
+</div>
+
+</section>
+
+<!-- PROJECTS -->
+<section id="projects">
+<h2 class="section-title">Projects</h2>
+
+<div class="projects">
+
+<div class="project">
+<h3>Supermarket Sales Analysis Dashboard</h3>
+<p>Analisis data penjualan supermarket untuk melihat tren penjualan dan perilaku pelanggan.</p>
+<a href="https://github.com/Hikris17/Supermarket-Analisis-Dashboard" target="_blank">View Project</a>
+</div>
+
+<div class="project">
+<h3>Sentiment Analysis — Aplikasi Riliv</h3>
+<p>Pipeline analisis sentimen dari data teks dengan klasifikasi dan visualisasi tren sentimen.</p>
+<a href="https://github.com/Hikris17/Sentiment-Analysis-aplikasi-Riliv" target="_blank">View Project</a>
+</div>
+
+<div class="project">
+<h3>Telecom Customer Analytics Dashboard</h3>
+<p>Analisis customer telecom untuk memahami churn dan perilaku pelanggan.</p>
+<a href="https://github.com/Hikris17/Telecom-customer-analytics-dashboard" target="_blank">View Project</a>
+</div>
+
+<div class="project">
+<h3>Healthplus Capstone</h3>
+<p>Project capstone aplikasi Healthplus dari program Bangkit.</p>
+<a href="https://github.com/Hikris17/Healthplus-capstone" target="_blank">View Project</a>
+</div>
+
+<div class="project">
+<h3>Streamlit Data App</h3>
+<p>Aplikasi data interaktif menggunakan Streamlit untuk analisis dataset.</p>
+<a href="https://github.com/Hikris17/streamlit-project" target="_blank">View Project</a>
+</div>
+
+<div class="project">
+<h3>Object Detection</h3>
+<p>Project ini menggunakan Tensorflow Object Detection api untuk mendeteksi objek secara realtime.</p>
+<a href="https://github.com/Hikris17/Object-Detection---Tensorflow" target="_blank">View Project</a>
+</div>
+
+</div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+<h2 class="section-title">Contact</h2>
+
+<div class="contact">
+<a href="mailto:krisnaekamaulana13@gmail.com">Email</a>
+<a href="https://github.com/Hikris17" target="_blank">GitHub</a>
+<a href="https://www.linkedin.com/in/krisna-eka-maulana-786939309/" target="_blank">LinkedIn</a>
+</div>
+
+</section>
+
+<footer>
+© 2026 Krisna Eka Maulana — Data Portfolio
+</footer>
+
+</body>
+</html>
