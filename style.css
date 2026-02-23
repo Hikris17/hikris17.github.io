@@ -12,10 +12,14 @@ body{background:#0f172a;color:white;scroll-behavior:smooth;}
 .btn:hover{background:#E0E7FF;}
 
 /* HERO */
-.hero{height:100vh;display:flex;justify-content:center;align-items:center;text-align:center;background:linear-gradient(135deg,#6366F1,#06B6D4);position:relative;}
-.hero .profile{width:160px;border-radius:20px;box-shadow:0 8px 20px rgba(0,0,0,0.3);border:3px solid #6366F1;margin-bottom:20px;}
+.hero{height:100vh;background:linear-gradient(135deg,#6366F1,#06B6D4);display:flex;align-items:center;justify-content:center;position:relative;}
+.hero .hero-content-wrapper{display:flex;align-items:center;gap:50px;max-width:1200px;margin:auto;flex-wrap:wrap;}
+.hero .hero-image img{width:250px;border-radius:20px;box-shadow:0 8px 20px rgba(0,0,0,0.3);border:3px solid #6366F1;}
+.hero .hero-text{flex:1;min-width:280px;text-align:left;}
 .hero h1{font-size:3rem;margin-bottom:10px;}
-.hero .typing{color:#facc15;font-weight:600;height:30px;}
+.hero .typing{color:#facc15;font-weight:600;height:30px;margin-bottom:15px;}
+.hero p{font-size:1.1rem;line-height:1.6;}
+.hero .btn{margin-top:20px;}
 
 /* SECTIONS */
 .section{padding:100px 10%;text-align:center;opacity:0;transform:translateY(50px);transition:1s;}
