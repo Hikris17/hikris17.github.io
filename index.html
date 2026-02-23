@@ -5,230 +5,98 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Krisna Eka Maulana | Data Analyst</title>
 
-<!-- Google Font -->
+<link rel="stylesheet" href="style.css">
+
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-
-<!-- Vue CDN -->
-<script src="https://unpkg.com/vue@3"></script>
-
-<style>
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:Poppins,sans-serif;
-}
-
-body{
-background:linear-gradient(135deg,#0f172a,#1e293b,#020617);
-color:white;
-}
-
-/* NAVBAR */
-nav{
-position:fixed;
-width:100%;
-padding:20px 80px;
-display:flex;
-justify-content:space-between;
-background:rgba(255,255,255,0.05);
-backdrop-filter:blur(10px);
-z-index:1000;
-}
-
-nav a{
-color:white;
-text-decoration:none;
-margin-left:25px;
-transition:0.3s;
-}
-
-nav a:hover{
-color:#38bdf8;
-}
-
-/* HERO */
-.hero{
-height:100vh;
-display:flex;
-align-items:center;
-justify-content:center;
-flex-direction:column;
-text-align:center;
-}
-
-.profile-img{
-width:180px;
-height:180px;
-border-radius:50%;
-object-fit:cover;
-border:4px solid #38bdf8;
-margin-bottom:20px;
-}
-
-h1{
-font-size:48px;
-}
-
-.highlight{
-color:#38bdf8;
-}
-
-/* SECTION */
-section{
-padding:120px 80px;
-}
-
-/* CARD */
-.card{
-background:rgba(255,255,255,0.05);
-padding:30px;
-border-radius:20px;
-backdrop-filter:blur(15px);
-transition:0.3s;
-}
-
-.card:hover{
-transform:translateY(-10px);
-box-shadow:0 10px 40px rgba(0,0,0,0.5);
-}
-
-/* PROJECT GRID */
-.grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-gap:30px;
-}
-
-/* BUTTON */
-.btn{
-display:inline-block;
-padding:12px 25px;
-background:#38bdf8;
-border-radius:10px;
-color:black;
-text-decoration:none;
-margin-top:15px;
-font-weight:600;
-}
-
-/* CONTACT */
-.contact{
-text-align:center;
-}
-
-/* FOOTER */
-footer{
-text-align:center;
-padding:40px;
-opacity:0.7;
-}
-</style>
 </head>
 
 <body>
 
-<div id="app">
-
-<!-- NAV -->
+<!-- NAVBAR -->
 <nav>
-<div><b>Krisna</b></div>
-<div>
-<a href="#about">About</a>
-<a href="#projects">Projects</a>
-<a href="#contact">Contact</a>
-</div>
+<h2>Krisna.</h2>
+<ul>
+<li><a href="#about">About</a></li>
+<li><a href="#projects">Projects</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
 </nav>
 
 <!-- HERO -->
 <section class="hero">
-<img src="Foto.jpg" class="profile-img" alt="profile">
-<h1>Krisna <span class="highlight">Eka Maulana</span></h1>
-<p>Data Analyst • Machine Learning • Dashboard Developer</p>
+<div class="hero-text">
+<h1>Hi, I'm Krisna Eka Maulana</h1>
+<p>Data Analyst • Data Science • Machine Learning</p>
+<a href="#projects" class="btn">View Projects</a>
+</div>
+
+<img src="Foto.jpg" class="profile">
 </section>
 
 <!-- ABOUT -->
 <section id="about">
-<div class="card">
 <h2>About Me</h2>
 <p>
-Saya seorang Data Analyst yang fokus pada data visualization, machine learning,
-dan business insights. Berpengalaman menggunakan Python, Power BI, dan dashboard analytics
-untuk membantu pengambilan keputusan berbasis data.
+Lulusan Informatika Universitas AMIKOM Yogyakarta dengan fokus pada data analytics,
+machine learning, dan visualisasi data. Berpengalaman dalam EDA, data cleaning,
+dan pembuatan dashboard insight bisnis.
 </p>
-</div>
 </section>
 
 <!-- PROJECTS -->
 <section id="projects">
-<h2 style="margin-bottom:40px">Projects</h2>
+<h2>Projects</h2>
 
-<div class="grid">
+<div class="project-grid">
 
-<div class="card" v-for="project in projects">
-<h3>{{project.title}}</h3>
-<p>{{project.desc}}</p>
-<a :href="project.link" class="btn" target="_blank">View Project</a>
+<div class="card">
+<h3>Supermarket Dashboard</h3>
+<p>EDA penjualan supermarket dan analisis perilaku pelanggan.</p>
+<a href="https://github.com/Hikris17/Supermarket-Analisis-Dashboard">View</a>
+</div>
+
+<div class="card">
+<h3>Telecom Analytics</h3>
+<p>Analisis churn pelanggan dan KPI dashboard.</p>
+<a href="https://github.com/Hikris17/Telecom-customer-analytics-dashboard">View</a>
+</div>
+
+<div class="card">
+<h3>Sentiment Analysis Riliv</h3>
+<p>Klasifikasi sentimen teks dan visualisasi tren.</p>
+<a href="https://github.com/Hikris17/Sentiment-Analysis-aplikasi-Riliv">View</a>
+</div>
+
+<div class="card">
+<h3>Healthplus Capstone</h3>
+<p>Project capstone data analytics.</p>
+<a href="https://github.com/Hikris17/Healthplus-capstone">View</a>
+</div>
+
+<div class="card">
+<h3>Streamlit Project</h3>
+<p>Interactive data app menggunakan Streamlit.</p>
+<a href="https://github.com/Hikris17/streamlit-project">View</a>
+</div>
+
+<div class="card">
+<h3>Object Detection</h3>
+<p>Build Object Detection with Tensorflow.</p>
+<a href="https://github.com/Hikris17/Object-Detection---Tensorflow">View</a>
 </div>
 
 </div>
 </section>
 
 <!-- CONTACT -->
-<section id="contact" class="contact">
-<div class="card">
-<h2>Contact Me</h2>
-<p>Email: krisna@email.com</p>
+<section id="contact">
+<h2>Contact</h2>
+<p>Email: krisnaekamaulana13@gmail.com</p>
 <p>GitHub: github.com/Hikris17</p>
-</div>
+<p>LinkedIn: krisna-eka-maulana</p>
 </section>
 
-<footer>
-© 2026 Krisna Eka Maulana
-</footer>
-
-</div>
-
-<script>
-Vue.createApp({
-data(){
-return{
-projects:[
-{
-title:"Supermarket Analytics Dashboard",
-desc:"Sales analysis, EDA, visualization, and revenue insights using Python.",
-link:"https://github.com/Hikris17/Supermarket-Analisis-Dashboard"
-},
-{
-title:"Sentiment Analysis Riliv",
-desc:"Text preprocessing, classification, and sentiment visualization dashboard.",
-link:"https://github.com/Hikris17/Sentiment-Analysis-aplikasi-Riliv"
-},
-{
-title:"Telecom Customer Analytics",
-desc:"Customer behavior analysis and churn insights dashboard.",
-link:"https://github.com/Hikris17/Telecom-customer-analytics-dashboard"
-},
-{
-title:"Healthplus Capstone",
-desc:"Bangkit capstone project web application.",
-link:"https://github.com/Hikris17/Healthplus-capstone"
-},
-{
-title:"Streamlit Project",
-desc:"Interactive data app using Streamlit.",
-link:"https://github.com/Hikris17/streamlit-project"
-},
-{
-title:"Shoes Store Project",
-desc:"Build Object Detection with Tensorflow.",
-link:"https://github.com/Hikris17/Object-Detection---Tensorflow"
-}
-]
-}
-}
-}).mount("#app")
-</script>
+<script src="script.js"></script>
 
 </body>
 </html>
