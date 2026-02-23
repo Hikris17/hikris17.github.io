@@ -5,268 +5,304 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Krisna Eka Maulana | Data Analyst</title>
 
-<style>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
+<style>
 *{
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family:Arial, sans-serif;
+font-family:"Poppins",sans-serif;
 }
 
 body{
+background:linear-gradient(135deg,#eef2ff,#f9fafb);
+color:#111;
+transition:.4s;
+}
+
+.dark{
 background:#0f172a;
 color:white;
 }
 
-/* NAVBAR */
-
+/* NAV */
 nav{
 display:flex;
 justify-content:space-between;
-padding:20px 10%;
-background:#020617;
+padding:20px 60px;
+backdrop-filter:blur(10px);
 position:sticky;
 top:0;
 }
 
-.logo{
-font-weight:bold;
-font-size:20px;
-}
-
-nav a{
-color:white;
-text-decoration:none;
-margin-left:20px;
+button{
+padding:8px 15px;
+border:none;
+border-radius:8px;
+cursor:pointer;
 }
 
 /* HERO */
-
 .hero{
-padding:120px 10%;
 text-align:center;
+padding:80px 20px;
+}
+
+.hero img{
+width:160px;
+border-radius:50%;
+box-shadow:0 20px 40px rgba(0,0,0,.2);
+margin-bottom:20px;
 }
 
 .hero h1{
-font-size:48px;
-margin-bottom:10px;
+font-size:40px;
 }
 
 .hero p{
-color:#94a3b8;
-}
-
-.btn{
-display:inline-block;
-margin-top:20px;
-padding:12px 25px;
-background:#3b82f6;
-color:white;
-text-decoration:none;
-border-radius:8px;
+opacity:.7;
 }
 
 /* SECTION */
-
-section{
-padding:80px 10%;
-}
-
-.section-title{
-font-size:32px;
-margin-bottom:40px;
-text-align:center;
-}
-
-/* ABOUT */
-
-.about{
-max-width:700px;
+.container{
+max-width:1100px;
 margin:auto;
-text-align:center;
-color:#cbd5f5;
+padding:40px 20px;
 }
 
-/* SKILLS */
-
-.skills{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
-gap:20px;
+h2{
+margin-bottom:20px;
 }
 
-.skill{
-background:#1e293b;
-padding:20px;
-border-radius:10px;
-text-align:center;
-}
-
-/* PROJECTS */
-
-.projects{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-gap:25px;
-}
-
-.project{
-background:#1e293b;
+/* GLASS CARD */
+.card{
+background:rgba(255,255,255,.6);
 padding:25px;
-border-radius:12px;
+border-radius:16px;
+backdrop-filter:blur(12px);
+box-shadow:0 10px 30px rgba(0,0,0,.1);
 transition:.3s;
 }
 
-.project:hover{
-transform:translateY(-5px);
+.dark .card{
+background:rgba(255,255,255,.05);
 }
 
-.project h3{
-margin-bottom:10px;
+.card:hover{
+transform:translateY(-8px);
 }
 
-.project p{
-color:#94a3b8;
+/* PROJECT GRID */
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:20px;
 }
 
-.project a{
-display:inline-block;
-margin-top:15px;
-color:#3b82f6;
+.card a{
+color:#2563eb;
+text-decoration:none;
+font-weight:600;
 }
 
-/* CONTACT */
-
-.contact{
-text-align:center;
+/* SKILLS */
+.skill{
+margin-bottom:15px;
 }
 
-.contact a{
-display:block;
-margin:10px;
-color:#3b82f6;
+.bar{
+height:8px;
+background:#ddd;
+border-radius:10px;
+overflow:hidden;
+}
+
+.bar div{
+height:100%;
+background:#2563eb;
+}
+
+/* TIMELINE */
+.timeline{
+border-left:3px solid #2563eb;
+padding-left:20px;
+}
+
+.timeline div{
+margin-bottom:20px;
 }
 
 /* FOOTER */
-
 footer{
 text-align:center;
-padding:30px;
-background:#020617;
-margin-top:50px;
+padding:40px;
+opacity:.6;
 }
 
+/* LOADING */
+.loader{
+position:fixed;
+width:100%;
+height:100vh;
+background:white;
+display:flex;
+justify-content:center;
+align-items:center;
+z-index:9999;
+}
+
+.dark .loader{
+background:#0f172a;
+}
+
+.spinner{
+width:40px;
+height:40px;
+border:5px solid #ccc;
+border-top:5px solid #2563eb;
+border-radius:50%;
+animation:spin 1s linear infinite;
+}
+
+@keyframes spin{
+100%{transform:rotate(360deg);}
+}
 </style>
 </head>
 
 <body>
 
-<!-- NAVBAR -->
-<nav>
-<div class="logo">Krisna Eka Maulana</div>
-<div>
-<a href="#about">About</a>
-<a href="#skills">Skills</a>
-<a href="#projects">Projects</a>
-<a href="#contact">Contact</a>
+<div class="loader">
+<div class="spinner"></div>
 </div>
+
+<nav>
+<h3>Krisna Eka Maulana</h3>
+<button onclick="toggleMode()">🌙</button>
 </nav>
 
-<!-- HERO -->
-<div class="hero">
-<h1>Data Analyst & Data Science Enthusiast</h1>
-<p>Mengubah data menjadi insight yang berdampak dan mudah dipahami.</p>
-<a class="btn" href="#projects">View My Work</a>
-</div>
+<section class="hero">
+<img src="profile.jpg">
+<h1>Data Analyst</h1>
+<p>Data Analysis • Machine Learning • Business Insight</p>
+</section>
 
-<!-- ABOUT -->
-<section id="about">
-<h2 class="section-title">About Me</h2>
-<p class="about">
-Lulusan Informatika Universitas AMIKOM Yogyakarta dengan fokus pada data analytics, data cleaning,
-dan visualisasi data. Berpengalaman dalam exploratory data analysis, preprocessing data,
-machine learning dasar, dan pembuatan dashboard untuk mendukung pengambilan keputusan berbasis data.
+<div class="container">
+
+<h2>About Me</h2>
+<div class="card">
+<p>
+Data Analyst dengan fokus pada exploratory data analysis, data visualization,
+dan machine learning untuk menghasilkan insight bisnis berbasis data.
+Lulusan Informatika Universitas AMIKOM Yogyakarta.
 </p>
-</section>
-
-<!-- SKILLS -->
-<section id="skills">
-<h2 class="section-title">Skills</h2>
-
-<div class="skills">
-<div class="skill">Python (Pandas)</div>
-<div class="skill">SQL</div>
-<div class="skill">Excel</div>
-<div class="skill">Power BI</div>
-<div class="skill">Tableau</div>
-<div class="skill">Data Cleaning</div>
-<div class="skill">EDA</div>
-<div class="skill">Machine Learning</div>
 </div>
 
-</section>
+<br>
 
-<!-- PROJECTS -->
-<section id="projects">
-<h2 class="section-title">Projects</h2>
+<h2>Skills</h2>
+<div class="card">
 
-<div class="projects">
+<div class="skill">
+Python
+<div class="bar"><div style="width:90%"></div></div>
+</div>
 
-<div class="project">
-<h3>Supermarket Sales Analysis Dashboard</h3>
-<p>Analisis data penjualan supermarket untuk melihat tren penjualan dan perilaku pelanggan.</p>
+<div class="skill">
+SQL
+<div class="bar"><div style="width:80%"></div></div>
+</div>
+
+<div class="skill">
+Power BI
+<div class="bar"><div style="width:85%"></div></div>
+</div>
+
+<div class="skill">
+Data Analysis
+<div class="bar"><div style="width:95%"></div></div>
+</div>
+
+</div>
+
+<br>
+
+<h2>Projects</h2>
+<div class="grid">
+
+<div class="card">
+<h3>Supermarket Analysis</h3>
+<p>EDA dan visualisasi data penjualan untuk revenue insight.</p>
 <a href="https://github.com/Hikris17/Supermarket-Analisis-Dashboard" target="_blank">View Project</a>
 </div>
 
-<div class="project">
-<h3>Sentiment Analysis — Aplikasi Riliv</h3>
-<p>Pipeline analisis sentimen dari data teks dengan klasifikasi dan visualisasi tren sentimen.</p>
+<div class="card">
+<h3>Sentiment Analysis — Riliv</h3>
+<p>Klasifikasi sentimen dan NLP pipeline.</p>
 <a href="https://github.com/Hikris17/Sentiment-Analysis-aplikasi-Riliv" target="_blank">View Project</a>
 </div>
 
-<div class="project">
-<h3>Telecom Customer Analytics Dashboard</h3>
-<p>Analisis customer telecom untuk memahami churn dan perilaku pelanggan.</p>
+<div class="card">
+<h3>Telecom Customer Analytics</h3>
+<p>Analisis churn dan KPI pelanggan.</p>
 <a href="https://github.com/Hikris17/Telecom-customer-analytics-dashboard" target="_blank">View Project</a>
 </div>
 
-<div class="project">
+<div class="card">
 <h3>Healthplus Capstone</h3>
-<p>Project capstone aplikasi Healthplus dari program Bangkit.</p>
+<p>Capstone Bangkit project.</p>
 <a href="https://github.com/Hikris17/Healthplus-capstone" target="_blank">View Project</a>
 </div>
 
-<div class="project">
+<div class="card">
 <h3>Streamlit Data App</h3>
-<p>Aplikasi data interaktif menggunakan Streamlit untuk analisis dataset.</p>
+<p>Interactive data app.</p>
 <a href="https://github.com/Hikris17/streamlit-project" target="_blank">View Project</a>
 </div>
 
-<div class="project">
-<h3>Object Detection</h3>
-<p>Project ini menggunakan Tensorflow Object Detection api untuk mendeteksi objek secara realtime.</p>
-<a href="https://github.com/Hikris17/Object-Detection---Tensorflow" target="_blank">View Project</a>
+<div class="card">
+<h3>Shoes Store Analysis</h3>
+<p>Retail data analysis.</p>
+<a href="https://github.com/Hikris17/shoesStore" target="_blank">View Project</a>
 </div>
 
 </div>
-</section>
 
-<!-- CONTACT -->
-<section id="contact">
-<h2 class="section-title">Contact</h2>
+<br>
 
-<div class="contact">
-<a href="mailto:krisnaekamaulana13@gmail.com">Email</a>
-<a href="https://github.com/Hikris17" target="_blank">GitHub</a>
-<a href="https://www.linkedin.com/in/krisna-eka-maulana-786939309/" target="_blank">LinkedIn</a>
+<h2>Education</h2>
+<div class="card timeline">
+<div>
+<h4>S1 Informatika — Universitas AMIKOM Yogyakarta</h4>
+<p>2021 — 2025</p>
+</div>
 </div>
 
-</section>
+<br>
+
+<h2>Contact</h2>
+<div class="card">
+<p>Email: krisnaekamaulana13@gmail.com</p>
+<p>GitHub: github.com/Hikris17</p>
+<p>LinkedIn: linkedin.com/in/krisna-eka-maulana-786939309</p>
+</div>
+
+</div>
 
 <footer>
-© 2026 Krisna Eka Maulana — Data Portfolio
+© 2026 Krisna Eka Maulana
 </footer>
+
+<script>
+function toggleMode(){
+document.body.classList.toggle("dark");
+}
+
+window.addEventListener("load",()=>{
+document.querySelector(".loader").style.display="none";
+});
+</script>
 
 </body>
 </html>
