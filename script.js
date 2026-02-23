@@ -1,30 +1,23 @@
-// Smooth scroll
-document.querySelectorAll('a.nav-link').forEach(anchor => {
-  anchor.addEventListener('click', function(e){
-    e.preventDefault();
-    const target = document.querySelector(this.getAttribute('href'));
-    if(target){
-      target.scrollIntoView({ behavior: 'smooth' });
-    }
-  });
-});
+const text = ["Data Analyst", "Machine Learning Enthusiast", "Data Science Enthusiast"];
+let count = 0;
+let index = 0;
+let currentText = "";
+let letter = "";
 
-// Highlight navbar on scroll
-window.addEventListener('scroll', () => {
-  const sections = document.querySelectorAll('section');
-  const scrollPos = window.scrollY + 80; // offset for navbar height
+function type(){
+if(count === text.length) count = 0;
 
-  sections.forEach(sec => {
-    const top = sec.offsetTop;
-    const bottom = top + sec.offsetHeight;
-    const id = sec.getAttribute('id');
-    const link = document.querySelector(`.nav-link[href="#${id}"]`);
-    if(link){
-      if(scrollPos >= top && scrollPos < bottom){
-        link.classList.add('active');
-      } else {
-        link.classList.remove('active');
-      }
-    }
-  });
-});
+currentText = text[count];
+letter = currentText.slice(0, ++index);
+
+document.querySelector(".typing").textContent = letter;
+
+if(letter.length === currentText.length){
+count++;
+index = 0;
+}
+
+setTimeout(type,120);
+}
+
+type();
